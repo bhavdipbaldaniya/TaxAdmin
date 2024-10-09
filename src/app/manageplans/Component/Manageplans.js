@@ -83,7 +83,7 @@ const Manageplans = () => {
                         </div>
                     </div>
                 ))}
-                <div className={style.MainDivForPlansCart}></div>
+                <div className={style.MainDivForPlansCart}>ss</div>
             </div>
         </>
     )

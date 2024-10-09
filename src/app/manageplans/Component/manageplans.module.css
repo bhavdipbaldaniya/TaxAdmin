@@ -12,6 +12,9 @@
 
 
 
+
+
+
 .MainDivForPlansCart {
     border: 1px solid var(--border);
     border-radius: var(--radius);
@@ -19,6 +22,7 @@
     background: var(--white);
     max-width: 285px;
     position: relative;
+
 }
 
 .HedingStanderd {
