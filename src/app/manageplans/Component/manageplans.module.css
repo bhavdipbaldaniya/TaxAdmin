@@ -1,7 +1,13 @@
 .MainDivForManagePlans {
+    /* display: grid;
+    gap: 32px;
+    margin-top: 42px;
+    grid-template-columns: 1fr 1fr 1fr 1fr; */
+    gap: 32px;
     margin-top: 42px;
     display: flex;
-    gap: 32px;
+    flex-direction: row;
+    flex-wrap: wrap;
 }
 
 .MainDivForPopularPlanMain {
@@ -133,4 +139,219 @@
     justify-content: center;
     gap: 5px;
     width: 100%;
+}
+
+
+.MainDivForSvgAndAddPlans {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.AddNewPlanSvgDiv {
+    width: 40px;
+    height: 40px;
+    border-radius: var(--buttonRadius);
+    background: var(--surfacePrimary);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.AddNewPlanText {
+    font-family: 'Poppins';
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 1.2;
+    color: var(--primary);
+    margin-top: 10px;
+
+}
+
+
+.MainDivForAddPlansCart {
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    padding: 32px;
+    background: var(--white);
+    min-width: 285px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.MainDivForSvgAndAddPlans:hover {
+    cursor: pointer;
+    transform: scale(1.2);
+    transition: all 0.5s ease;
+}
+
+
+
+
+.MainDivForFirstPlan {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    margin: auto;
+}
+
+.MainDivForFirstPlanText {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+
+}
+
+.NoPlansAvailableText {
+    font-family: 'Poppins-Medium';
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 1.2;
+    text-align: center;
+    color: var(--dark);
+
+}
+
+.FileSvgIcon {
+    margin-bottom: 20px;
+}
+
+.CreatFirstPlansText {
+    font-family: 'Poppins';
+    font-size: 13px;
+    font-weight: 500;
+    line-height: 1.2;
+    text-align: center;
+    color: var(--subtitle);
+    margin-bottom: 10px;
+
+}
+
+
+@media (max-width: 420px) {
+    .DiscriptionTextHading {
+        font-size: 11px;
+    }
+
+    .PriceText {
+        font-size: 20px;
+        margin-top: 15px;
+    }
+
+    .MainDivForToggalAndActiv {
+        margin-top: 15px;
+    }
+
+    .FeaturesText {
+        margin-top: 15px;
+        font-size: 12px;
+    }
+
+    .MainDivForFeatures {
+        margin-top: 5px;
+        margin-bottom: 5px;
+    }
+
+    .MainDivForEnrolled {
+        margin-top: 16px;
+        margin-bottom: 16px;
+    }
+
+    .EnrolledText {
+        font-size: 12px;
+    }
+
+    .DeletePlan {
+        font-size: 12px;
+    }
+
+    .EditPlan {
+        font-size: 12px;
+    }
+
+    .MainDivForAddPlansCart {
+        min-width: calc(100% - 64px);
+    }
+}
+
+.MainDivForPlanInformation {
+    width: 100%;
+    display: flex;
+    padding-bottom: 60px;
+    border-bottom: 1px solid var(--border)
+}
+
+.MainDivForPlanFeatures {
+    width: 100%;
+    display: flex;
+    padding-bottom: 60px;
+    margin-top: 32px;
+}
+
+.HedingMainDiv {
+    width: 30%;
+}
+
+.ManiDivForPlanInformationFild {
+    width: 70%;
+}
+
+.MainDivForPlanTitle {
+    display: flex;
+    width: 100%;
+    gap: 12px;
+    margin-bottom: 24px;
+}
+
+.ManageWidthPlanTitle {
+    width: 100%;
+}
+
+.MainDivForDescriptionPlan {
+    width: 100%;
+    margin-bottom: 24px;
+
+}
+
+.MainDivForPlanType {
+    display: flex;
+    gap: 12px;
+    align-items: center;
+
+}
+
+.MainDivForFeturshOption {
+    margin-bottom: 30px;
+}
+
+.AddIncomeBtm {
+    background-color: var(--white) !important;
+    color: var(--dark) !important;
+    border: 1px solid var(--border) !important;
+    margin-top: 0px !important;
+}
+
+.AddIncomeBtm:hover {
+    text-decoration: underline;
+    background-color: var(--white) !important;
+    transition: all 0.4s ease;
+}
+
+.CancelButton {
+    background-color: var(--white) !important;
+    border: 1px solid var(--primary) !important;
+    color: var(--primary) !important;
+}
+
+.MainDivForButtonCancelCreat {
+    display: flex;
+    gap: 20px;
+    justify-content: end;
+    align-items: center;
+    max-width: 354px;
+    margin-left: auto;
 }
