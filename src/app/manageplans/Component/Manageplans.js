@@ -1,12 +1,13 @@
 'use client'
 import Backsvg from '@/src/Component/Back/Backsvg'
-import { ic_CheckMark, ic_Delete, ic_DeletePlanes, ic_EditPlanes, ic_MainPlanes, ic_Manage_Plans } from '@/src/Utils/svg'
+import { ic_AddFileIconPlans, ic_AddPlanesPlushIcon, ic_AddPlanesPlushIconWhite, ic_CheckMark, ic_Delete, ic_DeletePlanes, ic_EditPlanes, ic_MainPlanes, ic_Manage_Plans } from '@/src/Utils/svg'
 import React from 'react'
 import style from './manageplans.module.css'
 import Heading3Fonts from '@/src/Typography/text/Heading3Fonts'
 import ToggleSwitch from '@/src/Component/FormElement/ToggleSwitch'
 import HeadingTextH1 from '@/src/Typography/text/HeadingTextH1'
 import MediumFont from '@/src/Typography/text/MediumFont'
+import Button from '@/src/Component/FormElement/Button'
 
 const plansData = {
     "plans": [
@@ -83,7 +84,26 @@ const Manageplans = () => {
                         </div>
                     </div>
                 ))}
-                <div className={style.MainDivForPlansCart}>ss</div>
+                {plansData.plans.length > 0 && (
+
+                    <div className={style.MainDivForAddPlansCart}>
+                        <div className={style.MainDivForSvgAndAddPlans}>
+                            <div className={style.AddNewPlanSvgDiv}>{ic_AddPlanesPlushIcon.icon()}</div>
+                            <div className={style.AddNewPlanText}>Add new plan</div>
+                        </div>
+                    </div>
+                )}
+
+                {plansData.plans.length <= 0 && (
+                    <div className={style.MainDivForFirstPlan}>
+                        <div className={style.FileSvgIcon}>{ic_AddFileIconPlans.icon()}</div>
+                        <div className={style.MainDivForFirstPlanText}>
+                            <span className={style.NoPlansAvailableText}>No plans available</span>
+                            <span className={style.CreatFirstPlansText}>Create your first plan</span>
+                        </div>
+                        <Button svg={ic_AddPlanesPlushIconWhite.icon()} text={'Add plan'} />
+                    </div>
+                )}
             </div>
         </>
     )

@@ -3,7 +3,7 @@ import React, { useEffect, useState } from "react";
 
 import TextArea from "../Component/FormElement/TextArea";
 import Dropdown from "../Component/FormElement/Dropdown";
-import GeneralIncome from "../Component/Profile/GeneralIncome";
+import GeneralIncome from "../Component/Profile/Planfeatures";
 import Button from "../Component/FormElement/Button";
 const page = () => {
   const [selectedOptions, setSelectedOptions] = useState("");
