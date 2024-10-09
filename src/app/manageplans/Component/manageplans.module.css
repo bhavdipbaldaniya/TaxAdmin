@@ -1,0 +1,132 @@
+.MainDivForManagePlans {
+    margin-top: 42px;
+    display: flex;
+    gap: 32px;
+}
+
+.MainDivForPopularPlanMain {
+    position: absolute;
+    top: -1px;
+    right: -1px;
+}
+
+
+
+.MainDivForPlansCart {
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    padding: 32px;
+    background: var(--white);
+    max-width: 285px;
+    position: relative;
+}
+
+.HedingStanderd {
+    color: var(--dark);
+    margin-bottom: 16px !important;
+}
+
+.DiscriptionTextHading {
+    font-family: 'Poppins';
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 1.2;
+    color: #576B75;
+    margin-top: 3px;
+
+}
+
+.MainDivForToggalAndActiv {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+    margin-top: 30px;
+}
+
+.ActivatePlanes {
+    font-family: 'Poppins-Medium';
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 1.2;
+    color: var(--dark);
+}
+
+.YesNoSwitch {
+    max-height: 30px;
+}
+
+.PriceText {
+    margin-top: 30px;
+    padding-top: 8px;
+}
+
+.FeaturesText {
+    font-family: 'Poppins-Black';
+    margin-top: 30px;
+}
+
+.MainDivForFeatures {
+    display: flex;
+    align-items: center;
+    text-align: center;
+    gap: 5px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.EnrolledText {
+    font-family: 'Poppins';
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 1.2;
+    color: var(--dark);
+
+}
+
+.MainDivForEnrolled {
+    margin-top: 32px;
+    margin-bottom: 32px;
+}
+
+.ActivatePlanesButtonMain {
+    display: flex;
+    width: 100%;
+    gap: 14px;
+}
+
+.DeletePlan {
+    font-family: 'Poppins-Medium';
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 1.2;
+    background-color: #FF25301A;
+    border: none;
+    outline: none;
+    color: var(--error);
+    border-radius: 5px;
+    padding: 6px 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+    width: 100%;
+}
+
+.EditPlan {
+    font-family: 'Poppins-Medium';
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 1.2;
+    background-color: #2256991A;
+    border: none;
+    outline: none;
+    color: var(--primary);
+    border-radius: 5px;
+    padding: 6px 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+    width: 100%;
+}
