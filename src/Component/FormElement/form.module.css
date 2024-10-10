@@ -31,11 +31,11 @@
   margin: 0;
 }
 
-.input:focus,
+/* .input:focus,
 .input:focus-visible {
   border: 1px solid #80878b;
   background-color: var(--surfacePrimary);
-}
+} */
 
 .defult_button {
   padding: 10px 0;
@@ -225,6 +225,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+  gap: 10px;
 }
 
 .Select {
@@ -434,6 +435,10 @@
 
 @media (max-width: 780px) {
   .label {
+    font-size: 12px;
+  }
+
+  .defult_button {
     font-size: 12px;
   }
 }

@@ -214,7 +214,14 @@ input[type="radio"]::before {
   .CaptionFont {
     font-size: 12px;
   }
-  .DisplayFont{
+
+  .DisplayFont {
     font-size: 24px;
+  }
+}
+
+@media (max-width: 780px) {
+  .HeadingTextH1 {
+    font-size: 16px;
   }
 }

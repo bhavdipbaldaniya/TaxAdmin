@@ -1,9 +1,10 @@
 import React from 'react'
+import Adminsettings from './Component/Adminsettings';
 
 const page = () => {
     return (
         <>
-            ' Admin Settings'
+            <Adminsettings />
         </>
     )
 }

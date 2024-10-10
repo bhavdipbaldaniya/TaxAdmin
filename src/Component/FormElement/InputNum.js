@@ -4,7 +4,7 @@ import Style from "./form.module.css";
 const InputNum = ({
     placeholder,
     value,
-    setValue,
+    onChange,
     name,
     onBlur,
     disable,
@@ -17,7 +17,7 @@ const InputNum = ({
             placeholder={placeholder}
             name={name}
             value={value}
-            onChange={(e) => setValue(e)}
+            onChange={(e) => onChange(e)}
             onBlur={onBlur}
             disabled={disable}
             onWheel={(e) => e.target.blur()}

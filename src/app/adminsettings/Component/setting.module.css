@@ -1,0 +1,193 @@
+.MainDivForHederTab {
+    padding: 4px;
+    border-radius: var(--radius);
+    border: 1px solid var(--border);
+    background-color: var(--white);
+    display: flex;
+    align-items: center;
+    width: max-content;
+    margin-top: 32px;
+
+}
+
+.TextTabDiv {
+    padding: 10px 30px;
+    border-radius: var(--radius);
+    font-family: 'Poppins-Medium';
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 1.2;
+    color: var(--subtitle);
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+
+.TextTabDivActivTab {
+    font-family: 'Poppins';
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 21px;
+    color: var(--white);
+    padding: 10px 30px;
+    border-radius: 6px;
+    background-color: var(--primary);
+    cursor: pointer;
+    transition: all 0.5s ease;
+}
+
+.MainDivForFederalTaxTable {
+    width: calc(100% - 3px);
+    height: 340.63px;
+    border-radius: var(--radius);
+    background-color: var(--white);
+    border: 1px solid var(--border);
+    margin-top: 56px;
+}
+
+.MainDivForTabHedings {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+    padding: 24px;
+    border-bottom: 1px solid var(--border)
+}
+
+.MainDivForHadingText {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+}
+
+.FederalTaxTaxt {
+    font-family: 'Poppins';
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 1.2;
+    color: var(--dark);
+    margin-bottom: 4px;
+
+}
+
+.ReviewAdjustText {
+    font-family: 'Poppins';
+    font-size: 13px;
+    font-weight: 500;
+    line-height: 1.2;
+    color: var(--body);
+
+}
+
+.EditButton {
+    padding: 10px 20px;
+    border-radius: var(--radius);
+    background-color: var(--white);
+    border: 1px solid var(--border);
+    font-family: 'Poppins';
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 1.2;
+    color: var(--subtitle);
+    outline: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+
+}
+
+.DropDownValiue {
+    margin-top: 0px !important;
+}
+
+.DropDownValiueStatus {
+    margin-top: 0px !important;
+    width: 194px !important;
+}
+
+.MainDivForHadingRightContent {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+}
+
+.SubHedingHeder {
+    background: var(--surfacePrimary);
+    border-bottom: 2px solid var(--border);
+    display: flex;
+    align-items: center;
+    text-align: center;
+}
+
+.SubHedingHederContent {
+    background: var(--white);
+    border-bottom: 1px solid var(--border);
+    display: flex;
+    align-items: center;
+    text-align: center;
+}
+
+.SubHadingText {
+    padding: 16px 24px !important;
+    color: var(--dark) !important;
+    width: 30%;
+    display: flex;
+    border-right: 1px solid var(--border);
+}
+
+.SubHadingTextTaxRate {
+    padding: 16px 24px !important;
+    color: var(--dark) !important;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 0 0 auto;
+    width: 70%;
+}
+
+.SubContentText {
+    font-family: 'Poppins-Medium';
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 1.2;
+    color: var(--body);
+    color: var(--dark);
+    width: 100%;
+    display: flex;
+    border-right: 1px solid var(--border);
+    padding: 16px 24px 16px 0px;
+
+}
+
+.SubContentTextSecond {
+    font-family: 'Poppins-Medium';
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 1.2;
+    color: var(--body);
+    color: var(--dark);
+    width: 100%;
+    display: flex;
+    /* border-right: 1px solid var(--border); */
+    padding: 16px 24px 16px 24px !important;
+
+}
+
+.SubHadingTextContent {
+    color: var(--dark) !important;
+    padding: 0px 3px 0px 24px;
+
+    width: 30%;
+    display: flex;
+    align-items: center;
+    border-right: 1px solid var(--border);
+}
+
+.SubContentTextSecondSection {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 0 0 auto;
+    width: 70%;
+}
