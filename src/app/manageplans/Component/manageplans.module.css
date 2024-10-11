@@ -282,7 +282,6 @@
     width: 100%;
     display: flex;
     padding-bottom: 60px;
-    border-bottom: 1px solid var(--border);
     margin-top: 64px;
 }
 

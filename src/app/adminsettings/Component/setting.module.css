@@ -38,7 +38,7 @@
 
 .MainDivForFederalTaxTable {
     width: calc(100% - 3px);
-    height: 340.63px;
+    height: 547px;
     border-radius: var(--radius);
     background-color: var(--white);
     border: 1px solid var(--border);
@@ -169,7 +169,6 @@
     color: var(--dark);
     width: 100%;
     display: flex;
-    /* border-right: 1px solid var(--border); */
     padding: 16px 24px 16px 24px !important;
 
 }
@@ -190,4 +189,145 @@
     justify-content: center;
     margin: 0 0 0 auto;
     width: 70%;
+    font-family: Poppins-Medium;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 1.2;
+    color: var(--body);
+
 }
+
+/* Edit Setting Start */
+.EditMainDivForHederContent {
+    padding: 24px;
+    border-radius: var(--radius);
+    background: var(--white);
+    border: 1px solid var(--border)
+}
+
+.EditMainDivForYearAndStatus {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.EditLable {
+    margin-bottom: 15px;
+}
+
+.EditLastModifyDev {
+    font-family: 'Poppins';
+    font-size: 12px;
+    font-style: italic;
+    font-weight: 400;
+    line-height: 1.2;
+    color: #808080;
+
+
+}
+
+.HedingMainDiv {
+    width: 30%;
+}
+
+.EditMainDivTaxableIncomeRange {
+    width: 100%;
+    display: flex;
+    padding-bottom: 60px;
+    /* border-bottom: 1px solid var(--border); */
+    margin-top: 64px;
+}
+
+.ManiDivForEditInformationFild {
+    width: 70%;
+}
+
+.DeleteButton {
+    width: 28px;
+    height: 28px;
+    padding: 6px 10px;
+    border-radius: 5px;
+    background-color: #FFD6D8;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 37px;
+    cursor: pointer;
+}
+
+.DeleteButton:hover {
+    cursor: pointer;
+    transform: scale(1.1);
+    transition: all 0.5s ease;
+}
+
+.EditMainDivForInputAndLableSection {
+    display: flex;
+    gap: 12px;
+    align-items: center;
+    text-align: center;
+    width: 100%;
+    margin-top: 32px;
+}
+
+.EditMainDivForInputAndLableSection:nth-child(1) {
+    display: flex;
+    gap: 12px;
+    align-items: center;
+    text-align: center;
+    width: 100%;
+    margin-top: 0px;
+}
+
+
+.EditLebulManegeDivSecond {
+    width: 20%;
+}
+
+.EditLebulManegeDiv {
+    width: 35%;
+}
+
+.EditDeleteManiDiv {
+    width: 10%;
+}
+
+.EditMainDivForCheckboxManage {
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    gap: 12px;
+    margin-top: 10px;
+}
+
+.MainDivForButtonCancelCreat {
+    display: flex;
+    gap: 20px;
+    justify-content: end;
+    align-items: center;
+    max-width: 354px;
+    margin-left: auto;
+}
+
+.CancelButton {
+    background-color: var(--white) !important;
+    border: 1px solid var(--primary) !important;
+    color: var(--primary) !important;
+}
+
+.AddIncomeBtm {
+    background-color: var(--white) !important;
+    color: var(--dark) !important;
+    border: 1px solid var(--border) !important;
+    margin-top: 32px !important;
+}
+
+.AddIncomeBtm:hover {
+    text-decoration: underline;
+    background-color: var(--white) !important;
+    transition: all 0.4s ease;
+}
+
+
+
+/* Edit Setting end */
