@@ -7,13 +7,13 @@ import Input from '@/src/Component/FormElement/Input';
 import InputNum from '@/src/Component/FormElement/InputNum';
 import Dropdown from '@/src/Component/FormElement/Dropdown';
 import ToggleOption from '@/src/Component/FormElement/ToggleOption';
-import style from './manageplans.module.css';
+import style from './editplan.module.css';
 import Button from '@/src/Component/FormElement/Button';
 import { ic_Delete } from '@/src/Utils/svg';
 import Breadcrumb from '@/src/Component/Breadcrumb/page';
 import { useRouter } from 'next/navigation';
 
-const PlanFeatures = () => {
+const Editplan = () => {
     const router = useRouter();
     const options = [
         { label: "Monthly", value: "Monthly" },
@@ -86,11 +86,11 @@ const PlanFeatures = () => {
 
     return (
         <>
-            <Back text={'Add New Plans'} onClick={() => BackClick()} />
+            <Back text={'Edit Plans'} onClick={() => BackClick()} />
             <Breadcrumb
                 paths={[
                     { name: "Manage Plans", route: "/manageplans" },
-                    { name: "Add New Plan" }
+                    { name: "Edit Plan" }
                 ]}
             />
             <div>
@@ -195,4 +195,4 @@ const PlanFeatures = () => {
     );
 };
 
-export default PlanFeatures;
+export default Editplan;

@@ -1,11 +1,10 @@
-'use client'
 import React from 'react'
-import Manageplans from './Component/Manageplans'
+import Editplan from './Component/Editplan'
 
 const page = () => {
     return (
         <>
-            <Manageplans />
+            <Editplan />
         </>
     )
 }
