@@ -128,9 +128,9 @@
 // export default Manageplans
 
 'use client';
-import React, { useState } from 'react';
+import React, { useEffect, useState } from "react";
 import Backsvg from '@/src/Component/Back/Backsvg';
-import { ic_AddFileIconPlans, ic_AddPlanesPlushIcon, ic_AddPlanesPlushIconWhite, ic_CheckMark, ic_DeletePlanes, ic_EditPlanes, ic_MainPlanes, ic_Manage_Plans } from '@/src/Utils/svg';
+import { ic_AddFileIconPlans, ic_AddPlanesPlushIcon, ic_AddPlanesPlushIconWhite, ic_CheckMark, ic_DeletePlanes, ic_EditPlanes, ic_MainPlanes, ic_Manage_Plans, ic_FilterIcon, ic_SortBtn } from '@/src/Utils/svg';
 import style from './manageplans.module.css';
 import Heading3Fonts from '@/src/Typography/text/Heading3Fonts';
 import ToggleSwitch from '@/src/Component/FormElement/ToggleSwitch';
@@ -138,7 +138,8 @@ import HeadingTextH1 from '@/src/Typography/text/HeadingTextH1';
 import MediumFont from '@/src/Typography/text/MediumFont';
 import Button from '@/src/Component/FormElement/Button';
 import { useRouter } from 'next/navigation';
-
+import DataTable from "react-data-table-component";
+import moment from "moment";
 const initialPlansData = {
     "plans": [
         {
@@ -178,7 +179,81 @@ const initialPlansData = {
 
 const Manageplans = () => {
     const [plansData, setPlansData] = useState(initialPlansData);
+    const [searchTerm, setSearchTerm] = useState("");
+    const [profiles, setProfiles] = useState([]);
+    const [loading, setLoading] = useState(false);
+
+
     const router = useRouter();
+    const staticProfiles = [
+        {
+            full_name: "Brdaley Lawlor",
+            createdAt: "2023-01-15T10:00:00Z",
+            Amount: '$2350',
+            proformaCounts: { proformaCount: 2 },
+        },
+        {
+            full_name: "Jerry Helfer",
+            createdAt: "2023-02-10T10:00:00Z",
+            Amount: '$4512',
+            proformaCounts: { proformaCount: 1 },
+        },
+        {
+            full_name: "Gareth Cuddy",
+            createdAt: "2023-02-10T10:00:00Z",
+            Amount: '$3459',
+            proformaCounts: { proformaCount: 1 },
+        },
+        {
+            full_name: "Kyle Luece",
+            createdAt: "2023-02-10T10:00:00Z",
+            Amount: '$1150',
+            proformaCounts: { proformaCount: 1 },
+        },
+    ];
+    useEffect(() => {
+        setLoading(true);
+        setTimeout(() => {
+            setProfiles(staticProfiles);
+            setLoading(false);
+        }, 500);
+    }, []);
+
+    const columns = [
+        { name: "Name", selector: profiles => profiles.full_name, sortable: true, searchable: true },
+        { name: "Amount", selector: profiles => profiles.Amount, sortable: true, searchable: true },
+        // { name: "Date", selector: profiles => moment(profiles.createdAt).format("MM/DD/YYYY"), sortable: true, searchable: true },
+        {
+            name: "Date",
+            selector: profiles => moment(profiles.createdAt).format("MMM D, YYYY"),
+            sortable: true,
+            searchable: true
+        },
+        // { name: "Status", selector: profiles => profiles.proformaCounts.proformaCount, sortable: true, searchable: true },
+        {
+            name: "Status", cell: profiles => (
+                <button className='StatusButton' >
+                    Paid
+                </button>
+            ),
+        },
+        {
+            name: "Plan Type",
+            cell: profiles => (
+                <button className='PremiumButton' >
+                    Premium +
+                </button>
+            ),
+        },
+    ];
+
+    const filteredProfiles = profiles.filter(profile => {
+        return (
+            profile.full_name.toLowerCase().includes(searchTerm.toLowerCase()) ||
+            profile.email?.toLowerCase().includes(searchTerm.toLowerCase())
+        );
+    });
+
 
     const handleAddPlanClick = () => {
         router.push('/manageplans/addnewplans');
@@ -253,6 +328,46 @@ const Manageplans = () => {
                     </div>
                 )}
             </div>
+
+
+
+            {initialPlansData.plans.length > 0 &&
+
+                <div className="MainDivForDataTable">
+                    <div className="MainDivForCustomersSearchFilterText">
+                        <div className="MainDivForHadingAndCount">
+                            <HeadingTextH1 text={'Billing History'} />
+                            <HeadingTextH1 className='Customercount' text={'(23)'} />
+
+
+                        </div>
+                        <div className='SerchMainDivDataTable'>
+                            <input
+                                type="text"
+                                placeholder="Search"
+                                value={searchTerm}
+                                onChange={(e) => setSearchTerm(e.target.value)}
+                                className='SearchInput'
+                            />
+                        </div>
+                        <div >
+                            <div className='FilterText'>{ic_FilterIcon.icon()}Filter</div>
+                            {/* {/ <div className='FilterText'>{ic_SortBtn.icon()}Sort By A-Z</div> /} */}
+                            {/* {/ <div className='FilterText'>Filter</div> /} */}
+                        </div>
+                    </div>
+                    <DataTable
+                        keyField="_id"
+                        title="Profiles List"
+                        columns={columns}
+                        data={filteredProfiles}
+                        progressPending={loading}
+                        pagination
+                        paginationPerPage={2}
+                        paginationRowsPerPageOptions={[5, 10, 20]}
+                    />
+                </div>
+            }
         </>
     );
 };

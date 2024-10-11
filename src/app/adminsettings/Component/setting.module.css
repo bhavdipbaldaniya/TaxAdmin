@@ -38,11 +38,20 @@
 
 .MainDivForFederalTaxTable {
     width: calc(100% - 3px);
-    height: 547px;
+    /* height: 547px; */
     border-radius: var(--radius);
     background-color: var(--white);
     border: 1px solid var(--border);
     margin-top: 56px;
+}
+
+.NoDataAvelabul {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+    padding: 24px;
+
 }
 
 .MainDivForTabHedings {
@@ -128,6 +137,15 @@
     text-align: center;
 }
 
+.SubHedingHederContent:last-child {
+    background: var(--white);
+    display: flex;
+    align-items: center;
+    text-align: center;
+    border-bottom: none;
+    border-radius: var(--radius);
+}
+
 .SubHadingText {
     padding: 16px 24px !important;
     color: var(--dark) !important;
@@ -195,6 +213,11 @@
     line-height: 1.2;
     color: var(--body);
 
+}
+
+
+.AddBtnDivRates {
+    min-width: 15%;
 }
 
 /* Edit Setting Start */
@@ -331,3 +354,77 @@
 
 
 /* Edit Setting end */
+
+/* Standard deduction start */
+.SubHedingHederStandardizedDeduction {
+    background: var(--surfacePrimary);
+    border-bottom: 2px solid var(--border);
+    display: flex;
+    align-items: center;
+    text-align: center;
+}
+
+.SubHadingTextStandardizedDeduction {
+    padding: 14px !important;
+    color: var(--dark) !important;
+    display: flex;
+    align-items: start;
+    justify-content: start;
+    width: 100%;
+    border-right: 1px solid var(--border)
+}
+
+.SubHadingTextStandardizedDeduction:last-child {
+    padding: 14px !important;
+    color: var(--dark) !important;
+    display: flex;
+    align-items: start;
+    justify-content: start;
+    width: 100%;
+    border-right: none
+}
+
+.MainDivForDataStandardDeduction {
+    background-color: var(--white);
+    border-bottom: 1px solid var(--border);
+    display: flex;
+    align-items: center;
+    text-align: center;
+}
+
+.MainDivForDataStandardDeduction:last-child {
+    background-color: var(--white);
+    border-bottom: none;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    border-radius: var(--radius);
+}
+
+
+
+.SubMainDivForDataStandardDeduction {
+    font-family: 'Poppins-Medium';
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 1.2;
+    text-align: left;
+    color: var(--body);
+    width: 100%;
+    padding: 14px;
+    border-right: 1px solid var(--border)
+}
+
+.SubMainDivForDataStandardDeduction:last-child {
+    font-family: 'Poppins-Medium';
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 1.2;
+    text-align: left;
+    color: var(--body);
+    width: 100%;
+    padding: 14px;
+    border-right: none
+}
+
+/* Standard deduction end */

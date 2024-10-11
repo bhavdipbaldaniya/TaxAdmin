@@ -147,22 +147,23 @@ import HeadingTextH1 from '@/src/Typography/text/HeadingTextH1'
 import InputNum from '@/src/Component/FormElement/InputNum'
 import Button from '@/src/Component/FormElement/Button'
 import { ic_Delete } from '@/src/Utils/svg'
+import { useRouter } from 'next/navigation'
 
 const EditAdminSettings = () => {
     const currentYear = new Date().getFullYear();
-    
-    // Initial state for form fields
+    const router = useRouter()
+
     const initialTaxFields = [{ from: '', to: '', taxRate: '', noUpperLimit: false }];
-    
+
     const [selectedYear, setSelectedYear] = useState(currentYear);
     const [activeStatus, setActiveStatus] = useState('MarriedFilingJointly');
-    const [taxFields, setTaxFields] = useState(initialTaxFields); 
+    const [taxFields, setTaxFields] = useState(initialTaxFields);
 
     const handleAddField = () => {
         const lastField = taxFields[taxFields.length - 1];
 
         if (lastField.from && lastField.to && lastField.taxRate) {
-            setTaxFields([...taxFields, { from: '', to: '', taxRate: '', noUpperLimit: false }]); 
+            setTaxFields([...taxFields, { from: '', to: '', taxRate: '', noUpperLimit: false }]);
         } else {
             alert('Please fill out the current fields before adding new ones.');
         }
@@ -176,7 +177,7 @@ const EditAdminSettings = () => {
 
     const handleCheckboxChange = (index) => {
         const updatedFields = [...taxFields];
-        updatedFields[index].noUpperLimit = !updatedFields[index].noUpperLimit;  
+        updatedFields[index].noUpperLimit = !updatedFields[index].noUpperLimit;
         setTaxFields(updatedFields);
     };
 
@@ -200,26 +201,26 @@ const EditAdminSettings = () => {
         { value: 'HeadOfHousehold', name: 'Head Of Household' }
     ];
 
-    // Function to handle the save action
     const handleSave = () => {
         const jsonData = {
             selectedYear,
             activeStatus,
             taxFields,
         };
-        console.log(JSON.stringify(jsonData, null, 2)); // Logs JSON data to console
+        console.log(JSON.stringify(jsonData, null, 2));
     };
 
-    // Function to reset the form
     const handleResetForm = () => {
-        setSelectedYear(currentYear); // Reset selected year to the current year
-        setActiveStatus('MarriedFilingJointly'); // Reset status to default
-        setTaxFields(initialTaxFields); // Reset tax fields to initial state
+        setSelectedYear(currentYear);
+        setActiveStatus('MarriedFilingJointly');
+        setTaxFields(initialTaxFields);
     };
-
+    const BackClick = () => {
+        router.push('/adminsettings')
+    }
     return (
         <>
-            <Back text={'Edit Federal Tax Bracket'} />
+            <Back onClick={() => BackClick()} text={'Edit Federal Tax Bracket'} />
             <Breadcrumb
                 paths={[
                     { name: "Admin Settings", route: "/adminsettings" },
@@ -321,12 +322,12 @@ const EditAdminSettings = () => {
                         className={style.CancelButton}
                         type={"button"}
                         text={"Cancel"}
-                        onClick={handleResetForm} // Attach the reset function here
+                        onClick={handleResetForm}
                     />
                     <Button
                         type={"button"}
                         text={"Save"}
-                        onClick={handleSave} // Attach the save function here
+                        onClick={handleSave}
                     />
                 </div>
             </div>
