@@ -3,7 +3,7 @@ import { useState, useRef, useEffect } from "react";
 import Style from "./form.module.css";
 import { ic_DropDown } from "@/src/Utils/svg";
 
-const Dropdown = ({ data, value, onChange, className, disable, searchable }) => {
+const Dropdown = ({ data, value, onChange, className, disable, searchable, setValue }) => {
   const [isOpenSelectMain, setIsOpenSelectMain] = useState(false);
   const [searchValue, setSearchValue] = useState("");
   const selectRef = useRef(null);
@@ -21,7 +21,8 @@ const Dropdown = ({ data, value, onChange, className, disable, searchable }) => 
   };
 
   const handleOptionSelect = (option) => {
-    onChange(option.value);  // Replace setValue with onChange
+    // onChange(option.value);  // Replace setValue with onChange
+    setValue(option.value);
     setIsOpenSelectMain(false);
   };
 
@@ -52,9 +53,8 @@ const Dropdown = ({ data, value, onChange, className, disable, searchable }) => 
     >
       <div className={Style.SelectSubMain} onClick={handleClickOpenSelectMain}>
         <span
-          className={`${Style.Select} ${className} ${
-            value ? Style.selectedText : ""
-          }`}
+          className={`${Style.Select} ${className} ${value ? Style.selectedText : ""
+            }`}
         >
           {value
             ? data?.find((option) => option.value === value)?.name
@@ -82,9 +82,8 @@ const Dropdown = ({ data, value, onChange, className, disable, searchable }) => 
             {filteredData?.map((option) => (
               <div
                 key={option.value}
-                className={`${Style.MainForOptionSelected} ${
-                  value === option.value ? Style.SelectedValue : ""
-                }`}
+                className={`${Style.MainForOptionSelected} ${value === option.value ? Style.SelectedValue : ""
+                  }`}
                 onClick={() => handleOptionSelect(option)}
               >
                 <div>{option.name}</div>
