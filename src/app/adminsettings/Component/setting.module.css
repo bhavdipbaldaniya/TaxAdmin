@@ -38,7 +38,7 @@
 
 .MainDivForFederalTaxTable {
     width: calc(100% - 3px);
-    /* height: 547px; */
+    min-width: 686px;
     border-radius: var(--radius);
     background-color: var(--white);
     border: 1px solid var(--border);
@@ -559,3 +559,89 @@
 }
 
 /* Manage Dropdown Items end */
+@media (max-width: 1230px) {
+    .EditMainDivTaxableIncomeRange {
+        display: block;
+    }
+
+    .HedingMainDiv {
+        width: 100%;
+    }
+
+    .ManiDivForEditInformationFild {
+        width: 100%;
+    }
+
+    .MainDivForEditSd {
+        width: 100%;
+    }
+}
+
+
+
+
+@media (max-width: 830px) {
+    .SubContentTextSecond {
+        font-size: 11px;
+    }
+
+    .SubContentText {
+        font-size: 12px;
+    }
+
+    .SubContentTextSecondSection {
+        font-size: 12px;
+    }
+
+    .SubHadingTextTaxRate {
+        font-size: 14px !important;
+    }
+
+    .SubHadingText {
+        font-size: 14px !important;
+    }
+
+    .ReviewAdjustText {
+        font-size: 11px;
+    }
+
+    .FederalTaxTaxt {
+        font-size: 16px;
+    }
+
+    .TextTabDivActivTab {
+        font-size: 12px;
+    }
+
+    .TextTabDiv {
+        font-size: 12px;
+    }
+
+    .MainDivForHadingRightContent {
+        gap: 10px;
+    }
+
+    .SubMainDivForDataStandardDeduction {
+        font-size: 12px;
+    }
+
+    .SubMainDivForDataStandardDeduction:last-child {
+        font-size: 12px;
+    }
+
+    .SubHadingTextStandardizedDeduction {
+        font-size: 12px;
+    }
+
+    .SubMainDivForDataManageDropdownItemsright {
+        font-size: 12px;
+    }
+
+    .SubMainDivForDataManageDropdownItemsLeft {
+        font-size: 12px;
+    }
+
+    .SubHedingHederManageDropdownItemsRightValue {
+        font-size: 14px !important;
+    }
+}
