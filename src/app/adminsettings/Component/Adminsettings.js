@@ -120,9 +120,9 @@ import React, { useState } from 'react';
 import style from './setting.module.css';
 import Backsvg from '@/src/Component/Back/Backsvg';
 import { ic_AdminSetings } from '@/src/Utils/svg';
-import TaxRates from './Taxrates';
 import StandardizedDeduction from './StandardizedDeduction';
 import ManageDropdownItems from './ManageDropdownItems';
+import TaxRates from './TaxRates';
 
 const Adminsettings = () => {
     const [activeTab, setActiveTab] = useState('Tax Rates');
