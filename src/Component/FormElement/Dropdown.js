@@ -3,7 +3,7 @@ import { useState, useRef, useEffect } from "react";
 import Style from "./form.module.css";
 import { ic_DropDown } from "@/src/Utils/svg";
 
-const Dropdown = ({ data, value, setValue, className, disable, searchable }) => {
+const Dropdown = ({ data, value, onChange, className, disable, searchable }) => {
   const [isOpenSelectMain, setIsOpenSelectMain] = useState(false);
   const [searchValue, setSearchValue] = useState("");
   const selectRef = useRef(null);
@@ -21,7 +21,7 @@ const Dropdown = ({ data, value, setValue, className, disable, searchable }) => 
   };
 
   const handleOptionSelect = (option) => {
-    setValue(option.value);
+    onChange(option.value);  // Replace setValue with onChange
     setIsOpenSelectMain(false);
   };
 
@@ -52,12 +52,13 @@ const Dropdown = ({ data, value, setValue, className, disable, searchable }) => 
     >
       <div className={Style.SelectSubMain} onClick={handleClickOpenSelectMain}>
         <span
-          className={`${Style.Select} ${className} ${value ? Style.selectedText : ""
-            }`}
+          className={`${Style.Select} ${className} ${
+            value ? Style.selectedText : ""
+          }`}
         >
           {value
-            ? data?.find((option) => option.value === value)?.name : 'Select'
-          }
+            ? data?.find((option) => option.value === value)?.name
+            : "Select"}
         </span>
         {disable && <span>{ic_DropDown.icon()}</span>}
         {!disable && <span>{ic_DropDown.icon()}</span>}
@@ -81,8 +82,9 @@ const Dropdown = ({ data, value, setValue, className, disable, searchable }) => 
             {filteredData?.map((option) => (
               <div
                 key={option.value}
-                className={`${Style.MainForOptionSelected} ${value === option.value ? Style.SelectedValue : ""
-                  }`}
+                className={`${Style.MainForOptionSelected} ${
+                  value === option.value ? Style.SelectedValue : ""
+                }`}
                 onClick={() => handleOptionSelect(option)}
               >
                 <div>{option.name}</div>
