@@ -64,7 +64,7 @@ const Login = () => {
         <div className={style.Loginwithmobilenumbercontentsubmain}>
           <HeadingTextH1 text={"Login"} />
           <form onSubmit={handleSubmit}>
-            <Label>Email Address</Label>
+            <Label className={style.LabDiv}>Email Address</Label>
             <Input
               placeholder={"Enter your email address"}
               name={"email"}
@@ -73,6 +73,8 @@ const Login = () => {
               value={values.email}
               onChange={handleChange}
               onBlur={formik.handleBlur}
+              className={style.Passwordcls}
+
             />
 
             {errors.email && touched.email && <ErrorText text={errors.email} />}
@@ -86,6 +88,7 @@ const Login = () => {
               value={values.password}
               onChange={handleChange}
               onBlur={formik.handleBlur}
+              className={style.Passwordcls}
             />
             {errors.password && touched.password && (
               <ErrorText text={errors.email} />

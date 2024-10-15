@@ -37,7 +37,7 @@
 }
 
 .DiscriptionTextHading {
-    font-family: 'Poppins';
+    font-family: 'Poppins-Medium';
     font-size: 14px;
     font-weight: 400;
     line-height: 1.2;
@@ -86,7 +86,7 @@
 }
 
 .EnrolledText {
-    font-family: 'Poppins';
+    font-family: 'Poppins-Medium';
     font-size: 14px;
     font-weight: 500;
     line-height: 1.2;
@@ -160,7 +160,7 @@
 }
 
 .AddNewPlanText {
-    font-family: 'Poppins';
+    font-family: 'Poppins-Medium';
     font-size: 14px;
     font-weight: 500;
     line-height: 1.2;
@@ -221,7 +221,7 @@
 }
 
 .CreatFirstPlansText {
-    font-family: 'Poppins';
+    font-family: 'Poppins-Medium';
     font-size: 13px;
     font-weight: 500;
     line-height: 1.2;
@@ -326,7 +326,7 @@
 }
 
 .MainDivForFeturshOption {
-    margin-bottom: 30px;
+    margin-bottom: 24px;
     width: 100%;
 }
 

@@ -1,7 +1,7 @@
 /* chart css start */
 
 .activeTab {
-  font-family: 'Poppins';
+  font-family: 'Poppins-Medium';
   font-size: 18px;
   font-weight: 600;
   line-height: 1.2;
@@ -13,7 +13,7 @@
 }
 
 .inactiveTab {
-  font-family: 'Poppins';
+  font-family: 'Poppins-Medium';
   font-size: 18px;
   font-weight: 600;
   line-height: 1.2;
@@ -90,7 +90,7 @@
 }
 
 .tooltipValue {
-  font-family: 'Poppins';
+  font-family: 'Poppins-Medium';
   font-size: 14.76px;
   font-weight: 400;
   line-height: 1.2;
