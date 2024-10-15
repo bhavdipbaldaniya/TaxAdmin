@@ -81,7 +81,7 @@
 }
 
 .ParsetegeManage {
-  font-family: 'Inter';
+  font-family: 'Poppins-Medium';
   font-size: 14px;
   font-weight: 500;
   line-height: 1.2;
@@ -98,7 +98,7 @@
 }
 
 .inlastMonthText {
-  font-family: 'Poppins';
+  font-family: 'Poppins-Medium';
   font-size: 14px;
   font-weight: 400;
   line-height: 1.2;
@@ -108,7 +108,7 @@
 }
 
 .GoToManagePlans {
-  font-family: 'Poppins';
+  font-family: 'Poppins-Medium';
   font-size: 14px;
   font-weight: 500;
   line-height: 1.2;
@@ -118,7 +118,7 @@
 
 }
 
-.BarGraphMainDiv{
+.BarGraphMainDiv {
   margin-top: 32px;
 }
 

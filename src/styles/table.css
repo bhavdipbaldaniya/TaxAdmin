@@ -37,10 +37,19 @@
     border-bottom: 2px solid var(--border) !important;
 }
 
+.chYGqH {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    background-color: var(--surfacePrimary) !important;
+    min-height: 52px;
+    border-bottom: 2px solid var(--border) !important;
+}
+
 .ddvZdT {
     overflow: visible !important;
     white-space: normal !important;
-    font-family: 'Poppins';
+    font-family: 'Poppins-Medium';
     font-size: 16px;
     font-weight: 600;
     line-height: 1.2;
@@ -49,6 +58,18 @@
 }
 
 .bOmZtP div:first-child {
+    overflow: visible !important;
+    white-space: normal !important;
+    font-family: 'Poppins-Medium';
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 1.2;
+    color: var(--dark);
+
+
+}
+
+.ioaitR div:first-child {
     overflow: visible !important;
     white-space: normal !important;
     font-family: 'Poppins-Medium';
@@ -70,6 +91,15 @@
 }
 
 .iGxMlw {
+    align-items: center !important;
+    border-bottom: 1.42px solid var(--border) !important;
+}
+
+.hXGOzQ:not(:last-of-type) {
+    border-bottom: 1.42px solid var(--border) !important;
+}
+
+.hXGOzQ {
     align-items: center !important;
     border-bottom: 1.42px solid var(--border) !important;
 }
@@ -108,12 +138,22 @@
     bottom: 5px;
 }
 
+.cNURWT {
+    width: calc(100% - 16px) !important;
+    border-top: none !important;
+    position: absolute;
+    bottom: 5px;
+}
+
 .dQcPXM:nth-child(6) {
     margin-right: 30px !important;
     justify-content: center !important;
 
 }
 
+.ilWGId {
+    display: none !important;
+}
 
 
 
@@ -200,7 +240,7 @@
 }
 
 .PremiumButton {
-    font-family: 'Poppins';
+    font-family: 'Poppins-Medium';
     font-size: 14px;
     font-weight: 500;
     line-height: 1.2;

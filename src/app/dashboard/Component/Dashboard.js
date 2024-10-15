@@ -299,10 +299,7 @@ function Dashboard() {
                 <div className={style.mainDivForSvg2}>{ic_TotalPlans.icon()}</div>
                 <CaptionFont text={'Total Plans'} />
               </div>
-              <div className={style.ParsetegeManageMainDiv}>
-                <span className={style.ParsetegeManage}>12%</span>
-                <span className={style.ProgreshSvg}>{ic_TotalRevenue_Progresh.icon()}</span>
-              </div>
+
 
             </div>
             <div className={style.mainDivForNumberValue}>
