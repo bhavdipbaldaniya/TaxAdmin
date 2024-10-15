@@ -108,12 +108,22 @@
     bottom: 5px;
 }
 
+.cNURWT {
+    width: calc(100% - 16px) !important;
+    border-top: none !important;
+    position: absolute;
+    bottom: 5px;
+}
+
 .dQcPXM:nth-child(6) {
     margin-right: 30px !important;
     justify-content: center !important;
 
 }
 
+.ilWGId {
+    display: none !important;
+}
 
 
 
