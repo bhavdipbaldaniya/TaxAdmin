@@ -55,7 +55,7 @@ p {
 
 ::placeholder,
 ::-moz-placeholder {
-  font-family: "Poppins" !important;
+  font-family: "Poppins-Medium" !important;
   font-size: 14px;
   font-weight: 400;
   line-height: 1.2;
@@ -65,14 +65,14 @@ p {
 
 
 /* input {
-  font-family: 'Poppins' !important;
+  font-family: 'Poppins-Medium' !important;
   font-size: 14px !important;
   line-height: 1.2 !important;
 
 } */
 
 .LableText {
-  font-family: "Poppins";
+  font-family: "Poppins-Medium";
   font-size: 14px;
   font-weight: 400;
   line-height: 1.2;
@@ -94,7 +94,7 @@ p {
 /* ************ FONT CSS ****************** */
 
 .boldFont {
-  font-family: "Poppins";
+  font-family: "Poppins-Medium";
   font-size: 14px;
   font-weight: bold;
   line-height: 1.2;
@@ -102,7 +102,7 @@ p {
 }
 
 .MediumFont {
-  font-family: "Poppins";
+  font-family: "Poppins-Medium";
   font-size: 14px;
   font-weight: bold;
   line-height: 1.2;
@@ -110,7 +110,7 @@ p {
 }
 
 .HeadingTextH1 {
-  font-family: "Poppins";
+  font-family: "Poppins-Medium";
   font-size: 24px;
   font-weight: 600;
   line-height: 1.2;
@@ -118,14 +118,14 @@ p {
 }
 
 .DisplayFont {
-  font-family: "Poppins";
+  font-family: "Poppins-Medium";
   font-size: 32px;
   font-weight: 600;
   line-height: 1.2;
 }
 
 .NameFont {
-  font-family: "Poppins";
+  font-family: "Poppins-Medium";
   font-size: 14px;
   font-weight: 400;
   line-height: 1.2%;
@@ -133,7 +133,7 @@ p {
 }
 
 .CaptionFont {
-  font-family: "Poppins";
+  font-family: "Poppins-Medium";
   font-size: 16px;
   font-weight: 500;
   line-height: 1.2;
@@ -141,7 +141,7 @@ p {
 }
 
 .Heading3Fonts {
-  font-family: "Poppins";
+  font-family: "Poppins-Medium";
   font-size: 16px;
   font-weight: 600;
   line-height: 1.2;
@@ -149,7 +149,7 @@ p {
 }
 
 .Heading2Fonts {
-  font-family: "Poppins";
+  font-family: "Poppins-Medium";
   font-size: 24px;
   font-weight: 600;
   line-height: 1.2;
@@ -158,7 +158,7 @@ p {
 }
 
 .ErrorText {
-  font-family: "Poppins";
+  font-family: "Poppins-Medium";
   font-size: 12px;
   font-weight: 400;
   line-height: 1.2;
