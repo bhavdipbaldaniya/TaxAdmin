@@ -22,7 +22,6 @@ const Editplan = () => {
     const [planTitle, setPlanTitle] = useState('');
     const [planAmount, setPlanAmount] = useState('');
     const [planDescription, setPlanDescription] = useState('');
-    const [planDuration, setPlanDuration] = useState('');
     const [planType, setPlanType] = useState(options[0].value);
     const [features, setFeatures] = useState([{ label: 'Feature 1', placeholder: 'Basic Tax Optimization', value: '' }]);
 
@@ -63,7 +62,6 @@ const Editplan = () => {
             title: planTitle,
             amount: planAmount,
             description: planDescription,
-            duration: planDuration,
             type: planType,
             features: features.map(f => f.value)
         };
@@ -75,7 +73,6 @@ const Editplan = () => {
         setPlanTitle('');
         setPlanAmount('');
         setPlanDescription('');
-        setPlanDuration('');
         setPlanType(options[0].value);
         setFeatures([{ label: 'Feature 1', placeholder: 'Basic Tax Optimization', value: '' }]);
     };
@@ -126,14 +123,6 @@ const Editplan = () => {
                             />
                         </div>
                         <div className={style.MainDivForPlanType}>
-                            <div>
-                                <Label>{'Select Duration'}</Label>
-                                <Dropdown
-                                    disable={false}
-                                    value={planDuration}
-                                    onChange={(e) => setPlanDuration(e.target.value)}
-                                />
-                            </div>
                             <div>
                                 <Label>{'Plan Type'}</Label>
                                 <ToggleOption

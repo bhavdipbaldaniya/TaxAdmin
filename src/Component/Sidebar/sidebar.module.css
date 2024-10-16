@@ -189,7 +189,7 @@
 }
 
 .MainTabTextActiv {
-  font-family: "Poppins";
+  font-family: "Poppins-Medium";
   font-size: 16px;
   font-weight: 600;
   line-height: 1.2;
@@ -197,7 +197,7 @@
 }
 
 .NumberOfNewCostomer {
-  font-family: "Poppins";
+  font-family: "Poppins-Medium";
   height: 17px;
   font-size: 12px;
   font-weight: 500;
@@ -286,7 +286,7 @@
 }
 
 .DropValue {
-  font-family: "Poppins";
+  font-family: "Poppins-Medium";
   font-size: 13px;
   font-weight: 500;
   line-height: 1.2;

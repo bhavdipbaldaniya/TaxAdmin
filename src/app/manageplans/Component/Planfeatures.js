@@ -236,36 +236,6 @@ const PlanFeatures = () => {
               </div>
               <div className={style.MainDivForPlanType}>
                 <div>
-                  <Label>{"Select Duration"}</Label>
-
-                  {/* <Dropdown
-                    data={months}
-                    setValue={setPlanDuration}
-                    disable={false}
-                    value={values.planDuration}
-                    // value={planDuration}
-                    // onChange={(e) => setPlanDuration(e.target.value)}
-                    name="planDuration"
-                    onChange={(e) => handleChange(e)}
-                    onBlur={handleBlur}
-                  /> */}
-                  <Dropdown
-                    data={months}
-                    disable={false}
-                    value={formik.values.planDuration}
-                    onChange={(val) =>
-                      formik.setFieldValue("planDuration", val)
-                    }
-                    className="dropdown-class"
-                    searchable={false}
-                  />
-
-                  {errors.planDuration && touched.planDuration && (
-                    <ErrorText text={errors.planDuration} />
-                  )}
-                </div>
-
-                <div>
                   <Label>{"Plan Type"}</Label>
                   <ToggleOption
                     options={options}
@@ -336,7 +306,7 @@ const PlanFeatures = () => {
             <Button
               type={"submit"}
               text={"Create Plan"}
-              // onClick={handleCreatePlan}
+            // onClick={handleCreatePlan}
             />
           </div>
         </form>

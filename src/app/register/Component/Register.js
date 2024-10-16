@@ -75,7 +75,7 @@ const Register = () => {
         <div className={style.Loginwithmobilenumbercontentsubmain}>
           <HeadingTextH1 text={"Sign up"} />
           <form onSubmit={handleSubmit}>
-            <Label>Full Name</Label>
+            <Label className={style.LabDiv}>Full Name</Label>
             <Input
               placeholder={"Enter your full name"}
               name={"name"}
@@ -84,10 +84,11 @@ const Register = () => {
               value={values.name}
               onChange={handleChange}
               onBlur={formik.handleBlur}
+              className={style.Passwordcls}
             />
             {errors.name && touched.name && <ErrorText text={errors.name} />}
 
-            <Label>Email Address</Label>
+            <Label className={style.LabDiv}>Email Address</Label>
             <Input
               placeholder={"Enter your email address"}
               name={"email"}
@@ -96,6 +97,8 @@ const Register = () => {
               value={values.email}
               onChange={handleChange}
               onBlur={formik.handleBlur}
+              className={style.Passwordcls}
+
             />
             {errors.email && touched.email && <ErrorText text={errors.email} />}
             {emailError && <ErrorText text={emailError} />}
@@ -109,6 +112,8 @@ const Register = () => {
               value={values.password}
               onChange={handleChange}
               onBlur={formik.handleBlur}
+              className={style.Passwordcls}
+
             />
             {errors.password && touched.password && (
               <ErrorText text={errors.password} />
@@ -122,6 +127,8 @@ const Register = () => {
               value={values.cnf_password}
               onChange={handleChange}
               onBlur={formik.handleBlur}
+              className={style.Passwordcls}
+
             />
             {errors.cnf_password && touched.cnf_password && (
               <ErrorText text={errors.cnf_password} />

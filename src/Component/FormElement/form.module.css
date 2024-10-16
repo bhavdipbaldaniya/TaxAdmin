@@ -1,6 +1,6 @@
 .label {
   width: 100%;
-  font-family: "Poppins";
+  font-family: "Poppins-Medium";
   font-size: 14px;
   font-weight: 400;
   line-height: 1.2;
@@ -16,7 +16,7 @@
   border: 1px solid var(--border);
   padding: 8px 20px;
   outline: none;
-  margin-top: 12px;
+  margin-top: 6px;
   min-width: 120px;
 }
 
@@ -45,7 +45,7 @@
   border-radius: var(--buttonRadius);
   background-color: var(--primary);
 
-  font-family: "Poppins";
+  font-family: "Poppins-Medium";
   font-size: 16px;
   font-weight: 600;
   line-height: 1.2;
@@ -230,7 +230,7 @@
 
 .Select {
   font-weight: 400;
-  font-family: "Poppins";
+  font-family: "Poppins-Medium";
   font-size: 14px;
   color: var(--subtitle);
 }
@@ -238,7 +238,7 @@
 .selectedText {
   color: var(--subtitle);
   font-weight: 600;
-  font-family: "Poppins";
+  font-family: "Poppins-Medium";
   font-size: 14px;
 }
 
@@ -281,7 +281,7 @@
   padding-left: 22px;
   background-size: 20px;
   mix-blend-mode: multiply;
-  font-family: "Poppins";
+  font-family: "Poppins-Medium";
   font-size: 14px;
   font-weight: 400;
   line-height: 1.2;
@@ -323,7 +323,7 @@
 .SelectedValue {
   color: var(--white);
   font-weight: 300;
-  font-family: "Poppins";
+  font-family: "Poppins-Medium";
   background-color: var(--primary);
 }
 
@@ -394,7 +394,7 @@
 /* ************************************************************ RADIO OPTION  ****************************************************** */
 
 .containerRadio {
-  margin-top: 12px;
+  margin-top: 6px;
   display: flex;
   border: 1px solid var(--border);
   border-radius: var(--radius);
