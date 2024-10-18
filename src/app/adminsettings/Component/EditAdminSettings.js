@@ -179,13 +179,11 @@ const EditAdminSettings = () => {
                     <div className={style.EditLebulManegeDiv}>
                       <Label>{"To"}</Label>
                       <InputNum
-                        // value={field.to}
                         value={field.noUpperLimit ? -1 : field.to}
                         name={`taxFields[${index}].to`}
                         onChange={handleChange}
                         onBlur={handleBlur}
                         placeholder={"$11,600"}
-                        // disable={true}
                         disable={field.noUpperLimit}
                       />
                       {errors.taxFields?.[index]?.to &&
