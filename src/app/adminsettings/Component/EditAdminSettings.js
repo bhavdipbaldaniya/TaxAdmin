@@ -13,12 +13,15 @@ import { useRouter } from "next/navigation";
 import * as Yup from "yup";
 import { useFormik } from "formik";
 import ErrorText from "@/src/Typography/text/ErrorText";
+import InputNumLimit from "@/src/Component/FormElement/InputNumLimit";
 
 const EditAdminSettings = () => {
   const currentYear = new Date().getFullYear();
   const router = useRouter();
   const [errMsg, setErrMsg] = useState("");
   const [showErr, setShowErr] = useState(false);
+  const [showDeleteBtn, setShowDeleteBtn] = useState(false);
+
   const initialTaxFields = [
     { from: "", to: "", taxRate: "", noUpperLimit: false },
   ];
@@ -41,10 +44,14 @@ const EditAdminSettings = () => {
     initialValues: editAdminInitialValue,
     validationSchema: editAdminValidation,
     onSubmit: (values, action) => {
+      const updatedTaxFields = values.taxFields.map((field) => ({
+        ...field,
+        to: field.noUpperLimit ? -1 : field.to,
+      }));
       const jsonData = {
         selectedYear: values.selectedYear,
         activeStatus: values.activeStatus,
-        taxFields: values.taxFields,
+        taxFields: updatedTaxFields,
       };
       console.log(JSON.stringify(jsonData, null, 2));
       action.resetForm();
@@ -83,6 +90,7 @@ const EditAdminSettings = () => {
   };
 
   const handleCheckboxChange = (index) => {
+    setShowDeleteBtn(!showDeleteBtn);
     const updatedFields = [...values.taxFields];
     updatedFields[index].noUpperLimit = !updatedFields[index].noUpperLimit;
     setFieldValue("taxFields", updatedFields);
@@ -171,11 +179,14 @@ const EditAdminSettings = () => {
                     <div className={style.EditLebulManegeDiv}>
                       <Label>{"To"}</Label>
                       <InputNum
-                        value={field.to}
+                        // value={field.to}
+                        value={field.noUpperLimit ? -1 : field.to}
                         name={`taxFields[${index}].to`}
                         onChange={handleChange}
                         onBlur={handleBlur}
                         placeholder={"$11,600"}
+                        // disable={true}
+                        disable={field.noUpperLimit}
                       />
                       {errors.taxFields?.[index]?.to &&
                         touched.taxFields?.[index]?.to && (
@@ -185,12 +196,13 @@ const EditAdminSettings = () => {
 
                     <div className={style.EditLebulManegeDivSecond}>
                       <Label>{"Tax Rate"}</Label>
-                      <InputNum
+                      <InputNumLimit
                         value={field.taxRate}
                         name={`taxFields[${index}].taxRate`}
                         onChange={handleChange}
                         onBlur={handleBlur}
                         placeholder={"10%"}
+                        maxValue={100}
                       />
                       {errors.taxFields?.[index]?.taxRate &&
                         touched.taxFields?.[index]?.taxRate && (
@@ -198,7 +210,7 @@ const EditAdminSettings = () => {
                         )}
                     </div>
 
-                    {values.taxFields.length > 1 && (
+                    {values.taxFields.length > 1 && !showDeleteBtn && (
                       <div
                         className={style.DeleteButton}
                         onClick={() => handleDeleteField(index)}
