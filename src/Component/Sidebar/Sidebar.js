@@ -71,6 +71,9 @@ const Sidebar = ({ children }) => {
   const OnclickSideBar = (name, index) => {
     setActiveIndex(index);
     router.push(`${name}`);
+    if (window.innerWidth <= 1320) {
+      togalSidBar();
+    }
   };
   const OnclickSideBarDashboard = () => {
     router.push(`/dashboard`);
