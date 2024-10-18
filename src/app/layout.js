@@ -13,6 +13,7 @@ export default function RootLayout({ children }) {
   const router = useRouter();
 
   useEffect(() => {
+    
     const Storage = localStorage.getItem('accessToken');
     setToken(Storage);
 

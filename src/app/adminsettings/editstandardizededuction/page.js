@@ -1,11 +1,10 @@
-'use client'
 import React from 'react'
-import Manageplans from './Component/Manageplans'
+import EditStandardizeDeduction from './EditStandardizeDeduction'
 
 const page = () => {
     return (
         <>
-            <Manageplans />
+            <EditStandardizeDeduction />
         </>
     )
 }

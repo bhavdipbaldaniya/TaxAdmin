@@ -21,10 +21,16 @@
 }
 
 .ButtonText {
-    font-family: 'Poppins';
+    font-family: 'Poppins-Medium';
     font-size: 24px;
     font-weight: 600;
     line-height: 1.2;
     text-align: left;
 
+}
+
+@media (max-width: 830px) {
+    .ButtonText {
+        font-size: 18px;
+    }
 }

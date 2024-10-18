@@ -18,34 +18,36 @@ import ErrorText from "@/src/Typography/text/ErrorText";
 const Profile = () => {
   const route = useRouter();
   const [photo, setPhoto] = useState(null);
+  const [photoURL, setPhotoURL] = useState(ProfileImage);
 
   const ProfileInitialValues = {
     first_name: "",
-    email: "",
     password: "",
-    password: "",
-    company: "",
-    address: "",
+    NewPassword: "",
+    ConfirmPassword: "",
   };
 
   const ProfileValidation = Yup.object({
     first_name: Yup.string().required("Please enter first name."),
-    email: Yup.string()
-      .email("Please enter valid email.")
-      .required("Please enter email."),
     password: Yup.string().required("Please enter password."),
-    company: Yup.string().required("Please enter company name."),
-    address: Yup.string().required("Please enter address."),
+    NewPassword: Yup.string()
+      .required("Please enter new password.")
+      .min(8, "Password must be at least 8 characters."),
+    ConfirmPassword: Yup.string()
+      .required("Please confirm your password.")
+      .oneOf([Yup.ref("NewPassword"), null], "Passwords must match."),
   });
+
   const formik = useFormik({
     initialValues: ProfileInitialValues,
     validationSchema: ProfileValidation,
     onSubmit: async (values, action) => {
       console.log(values);
       action.resetForm();
-      route.push("/");
+      // route.push("/");
     },
   });
+
   const { values, handleBlur, handleChange, handleSubmit, errors, touched } =
     formik;
 
@@ -53,17 +55,25 @@ const Profile = () => {
     const file = e.target.files[0];
     setPhoto(file);
     formik.setFieldValue("photo", file);
+
+    if (file) {
+      const fileURL = URL.createObjectURL(file);
+      setPhotoURL(fileURL);
+    }
   };
 
+  const BackClick = () => {
+    route.push("/dashboard");
+  };
   return (
     <>
-      <Back text={"Edit Profile"} />
+      <Back onClick={() => BackClick()} text={"Edit Profile"} />
       <div className={style.ProfilePicMainDiv}>
         <form onSubmit={handleSubmit}>
           <div className={style.MainDivForBtn}>
             <div className={style.ProfilePicSubDiv}>
               <Image
-                src={ProfileImage}
+                src={photoURL}
                 className={style.profilephoto}
                 alt="profilepic"
                 property="true"
@@ -81,6 +91,7 @@ const Profile = () => {
               </label>
             </div>
           </div>
+
           <div className={style.InputMainDiv}>
             <div className={style.MainDivForInput}>
               <div className={style.SubDivForInput}>
@@ -93,36 +104,19 @@ const Profile = () => {
                   onChange={handleChange}
                   onBlur={handleBlur}
                 />
-
                 {errors.first_name && touched.first_name && (
                   <ErrorText text={errors.first_name} />
                 )}
               </div>
 
               <div className={style.SubDivForInput}>
-                <Label for={"email"}>Email</Label>
-                <Input
-                  placeholder={"Enter email"}
-                  name={"email"}
-                  disable={false}
-                  value={values?.email}
-                  onChange={handleChange}
-                  onBlur={handleBlur}
-                />
-                {errors.email && touched.email && (
-                  <ErrorText text={errors.email} />
-                )}
-              </div>
-            </div>
-            <div className={style.MainDivForInput}>
-              <div className={style.SubDivForInput}>
-                <Label for={"password"}>Password</Label>
+                <Label for={"password"}>Old Password</Label>
                 <InputPassword
-                  placeholder={"Enter password"}
+                  placeholder={"Enter old password"}
                   name={"password"}
                   type={"password"}
                   disable={false}
-                  value={values?.password}
+                  value={values.password}
                   onChange={handleChange}
                   onBlur={handleBlur}
                 />
@@ -130,38 +124,38 @@ const Profile = () => {
                   <ErrorText text={errors.password} />
                 )}
               </div>
-              <div className={style.SubDivForInput}>
-                <Label for={"company"}>Company</Label>
-                <Input
-                  placeholder={"Enter password"}
-                  name={"company"}
-                  type={"text"}
-                  disable={false}
-                  value={values?.company}
-                  onChange={handleChange}
-                  onBlur={handleBlur}
-                />
-                {errors.company && touched.company && (
-                  <ErrorText text={errors.company} />
-                )}
-              </div>
             </div>
+
             <div className={style.MainDivForInput}>
               <div className={style.SubDivForInput}>
-                <Label for={"address"}>Address</Label>
-                <TextArea
-                  placeholder={"Enter address"}
-                  name={"address"}
-
-                  type={"text"}   
-
+                <Label for={"NewPassword"}>New Password</Label>
+                <InputPassword
+                  placeholder={"Enter new password"}
+                  name={"NewPassword"}
+                  type={"password"}
                   disable={false}
-                  value={values?.address}
+                  value={values.NewPassword}
                   onChange={handleChange}
                   onBlur={handleBlur}
                 />
-                {errors.address && touched.address && (
-                  <ErrorText text={errors.address} />
+                {errors.NewPassword && touched.NewPassword && (
+                  <ErrorText text={errors.NewPassword} />
+                )}
+              </div>
+
+              <div className={style.SubDivForInput}>
+                <Label for={"ConfirmPassword "}>Confirm Password</Label>
+                <InputPassword
+                  placeholder={"Enter confirm password"}
+                  name={"ConfirmPassword"}
+                  type={"password"}
+                  disable={false}
+                  value={values.ConfirmPassword}
+                  onChange={handleChange}
+                  onBlur={handleBlur}
+                />
+                {errors.ConfirmPassword && touched.ConfirmPassword && (
+                  <ErrorText text={errors.ConfirmPassword} />
                 )}
               </div>
             </div>

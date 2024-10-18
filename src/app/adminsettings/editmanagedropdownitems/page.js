@@ -1,11 +1,10 @@
-'use client'
 import React from 'react'
-import Manageplans from './Component/Manageplans'
+import EditManageDropdownItems from './EditManageDropdownItems'
 
 const page = () => {
     return (
         <>
-            <Manageplans />
+            <EditManageDropdownItems />
         </>
     )
 }
