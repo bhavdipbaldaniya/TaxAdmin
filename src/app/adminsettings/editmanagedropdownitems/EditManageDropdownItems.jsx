@@ -43,7 +43,7 @@ const EditManageDropdownItems = () => {
     values.splice(index, 1);
     setFields(values);
     setFieldValue("fields", values);
-    setAddFieldError(""); // Clear any existing error
+    setAddFieldError(""); 
   };
 
   const BackClick = () => {
